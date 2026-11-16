@@ -1,14 +1,12 @@
 # 🐳₊˚⊹ Estudos com Docker
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Docker-29.9.3-2496ED?style=for-the-badge&logo=docker&logoColor=white](https://img.shields.io/badge/Docker-29.9.3-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)" />
-&#x20; \<img src="[https://img.shields.io/badge/WSL-2-4A90D9?style=for-the-badge&logo=linux&logoColor=white](https://img.shields.io/badge/WSL-2-4A90D9?style=for-the-badge\&logo=linux\&logoColor=white)" />
-&#x20; \<img src="[https://img.shields.io/badge/Status-Em%20aprendizado-FFB6C1?style=for-the-badge](https://img.shields.io/badge/Status-Em%20aprendizado-FFB6C1?style=for-the-badge)" />
-\</p>
+![Docker](https://img.shields.io/badge/Docker-29.9.3-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-\<p align="center">
-&#x20; 🌷 Um cantinho dedicado aos meus estudos, experimentos e descobertas com Docker!
-\</p>
+![WSL](https://img.shields.io/badge/WSL-2-4A90D9?style=for-the-badge&logo=linux&logoColor=white)
+
+![Status](https://img.shields.io/badge/Status-Em%20aprendizado-FFB6C1?style=for-the-badge)
+
+🌷 Um cantinho dedicado aos meus estudos, experimentos e descobertas com Docker!
 
 ---
 
