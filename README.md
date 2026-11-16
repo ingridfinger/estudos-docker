@@ -59,7 +59,8 @@ Em seguida, executei meu primeiro contêiner:
 docker run hello-world
 ```
 
-\<details> \<summary>🌸 Resultado do primeiro teste\</summary>
+\<details>
+\<summary>🌸 Resultado do primeiro teste\</summary>
 
 ```text
 Hello from Docker!
@@ -74,11 +75,10 @@ appears to be working correctly.
 
 O Docker conseguiu:
 
-1. Estabelecer comunicação entre o cliente e o Docker Engine;
+1. Estabelecer comunicação entre o cliente Docker e o Docker Engine;
 2. Baixar a imagem `hello-world` do Docker Hub;
 3. Criar um contêiner a partir da imagem;
 4. Executar o contêiner e apresentar o resultado no terminal.
-
 
 ## 🌷 Objetivo
 
