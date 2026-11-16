@@ -83,5 +83,3 @@ O Docker conseguiu:
 Construir uma base sólida em Docker, desenvolver habilidades práticas e aprender a utilizar contêineres no desenvolvimento e na implantação de aplicações.
 
 ---
-
-\<p align="center">   Feito com dedicação, café e um pouquinho de fofura. ♡   \<br/>   \<strong>Um passo de cada vez! 🎀\</strong> \</p>
