@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:latest
+    container_name: ${SISTEMA}
+    ports:
+      - "${PORTA}:80"
+    environment:
+      AMBIENTE: ${AMBIENTE}
+      PORTA: ${PORTA}
+      SISTEMA: ${SISTEMA}
