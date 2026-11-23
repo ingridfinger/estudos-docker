@@ -1,0 +1,75 @@
+
+services:
+  # Serviço responsável pelo banco de dados
+  db:
+    # Imagem oficial do MySQL, versão 8.4
+    image: mysql:8.4
+
+    # Nome personalizado do container
+    container_name: mysql-aula10
+
+    # Reinicia automaticamente, exceto quando parado manualmente
+    restart: unless-stopped
+
+    # Carrega as configurações do arquivo .env
+    env_file:
+      - .env
+
+    # Mapeia a porta 3306 do computador para o container
+    ports:
+      - "3306:3306"
+
+    # Utiliza o volume da Aula 09 para preservar os dados
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    # Verifica se o MySQL está pronto para receber conexões
+    healthcheck:
+      # Comando utilizado para verificar a saúde do MySQL
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+
+      # Intervalo entre as verificações
+      interval: 5s
+
+      # Tempo máximo de espera por uma resposta
+      timeout: 5s
+
+      # Quantidade de tentativas antes de considerar a verificação malsucedida
+      retries: 10
+
+      # Tempo inicial de tolerância durante a inicialização
+      start_period: 30s
+
+  # Serviço responsável pela aplicação Python
+  app:
+    # Constrói a imagem utilizando o Dockerfile do projeto
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Nome personalizado do container
+    container_name: app-aula10
+
+    # Reinicia a aplicação caso ela falhe
+    restart: on-failure
+
+    # Disponibiliza somente as variáveis necessárias à aplicação
+    environment:
+      DB_HOST: db
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+    # Aguarda o MySQL ficar saudável antes de iniciar
+    depends_on:
+      db:
+        condition: service_healthy
+
+# Declaração dos volumes utilizados pelo projeto
+volumes:
+  mysql_data:
+    # Informa que o volume já existe e não deve ser criado novamente
+    external: true
+
+    # Nome exato do volume criado na Aula 09
+    name: aula-09_mysql_data
