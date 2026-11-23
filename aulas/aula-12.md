@@ -1,4 +1,4 @@
-# 🐳 Aula 12 — Boas práticas e revisão geral do Docker 🎀
+# 🐳 Aula 12 — Boas práticas e revisão geral do Docker
 
 > 🌷 Conhecendo boas práticas para organizar projetos, construir imagens, proteger configurações e manter o ambiente Docker organizado.
 
